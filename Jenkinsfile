@@ -1,8 +1,9 @@
 node {
-  
+  stages {
   stage ('SCM CHECKOUT') {
-    git 'https://github.com/yassinedarwezi/YassinGit.git' }
-  
+    steps{
+      git 'https://github.com/yassinedarwezi/YassinGit.git' }}
+    steps {
         stage ('Initialize') {
             
                 sh '''
@@ -10,7 +11,7 @@ node {
                     echo "M2_HOME = ${M2_HOME}"
                 '''
             
-        }
+        }}
  stage ('BUild') {
    steps {
      withMaven(maven: 'M2_HOME'){
@@ -22,3 +23,4 @@ node {
 }
  }     
 } 
+}
