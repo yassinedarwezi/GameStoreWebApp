@@ -15,10 +15,19 @@ node {
             
         }
 
-        stage ('Test') {
+         stage ('Initialize') {
+           
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}"
+                '''
             
-              sh 'mvn -B -DskipTests clean package'
-            }
+        }
+
+        stage ('Build') {
+          
+                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+            
   
 }
            
