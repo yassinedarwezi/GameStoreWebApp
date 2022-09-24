@@ -11,9 +11,9 @@ node {
             
         }
 
-        stage ('Build') {
+        stage ('Test') {
             
-                sh 'M2_HOME -Dmaven.test.failure.ignore=true install' 
+              sh 'mvn -B -DskipTests clean package'
             }
   
 }
