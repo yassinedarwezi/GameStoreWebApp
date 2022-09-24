@@ -13,7 +13,7 @@ node {
 
         stage ('Build') {
             
-                sh 'mvn -Dmaven.test.failure.ignore=true install' 
+                sh 'M2_HOME -Dmaven.test.failure.ignore=true install' 
             }
   
 }
