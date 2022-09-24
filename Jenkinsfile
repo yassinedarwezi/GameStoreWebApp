@@ -1,7 +1,7 @@
 node {
   stage ('SCM CHECKOUT') {
     git 'https://github.com/yassinedarwezi/YassinGit.git' }
-  stages {
+  
         stage ('Initialize') {
             steps {
                 sh '''
