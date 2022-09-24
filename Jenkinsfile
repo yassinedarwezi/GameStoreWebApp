@@ -1,4 +1,4 @@
-node {
+pipline {
   stages {
   stage ('SCM CHECKOUT') {
     steps{
