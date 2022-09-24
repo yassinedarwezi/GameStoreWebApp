@@ -16,7 +16,7 @@ pipeline {
  stage ('BUild') {
    steps {
      withMaven(maven: 'M2_HOME'){
-       sh 'mvn compile test install'
+       sh 'mvn clean test install'
 
         
   
