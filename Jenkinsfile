@@ -1,7 +1,8 @@
 pipeline {
+  agents any
   stages {
   stage ('SCM CHECKOUT') {
-    steps{
+    steps {
       git 'https://github.com/yassinedarwezi/YassinGit.git' }}
     steps {
         stage ('Initialize') {
