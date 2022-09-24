@@ -1,4 +1,4 @@
-pipline {
+pipeline {
   stages {
   stage ('SCM CHECKOUT') {
     steps{
